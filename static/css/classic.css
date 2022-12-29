@@ -9,4 +9,11 @@ form{
 }
 div{
     text-align: center;
+}body{
+    background-image: url("fitness-exercise-dumbell-workout-icon-1280x597.png");
+}
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }

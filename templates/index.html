@@ -5,16 +5,21 @@
     </head>
     <body>
         <h1>오늘의 운동은 어떻게 하실거예요?</h1>
-        <form action = "/create/" method = "POST">
-            <input type = "text" name = "name" placeholder = "운동 이름">
-            <input type = "text" name = "count" placeholder = "회수">
-            <input type = "text" name = "setting" placeholder = "세트">
-            <input type = "submit" value = "입력">
-        </form>
+        <div class="container">
+            <form action = "/create/" method = "POST">
+                <input type = "text" name = "name" placeholder = "운동 이름">
+                <input type = "text" name = "count" placeholder = "회수">
+                <input type = "text" name = "setting" placeholder = "세트">
+                <input type = "submit" value = "입력">
+            </form>
+            <form action = '/'>
+                <input type = "submit" value = "초기화">
+            </form>
+        </div>
             {% for item in menu %}
                 <div>
                     {% for check in range(item['setting']) %}
-                        <input type = "checkbox">
+                        <input type = "checkbox" >
                     {% endfor %}  
                     {{item['name']}}
                     {{item['count']}}

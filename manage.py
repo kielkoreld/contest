@@ -3,6 +3,7 @@ menu = []
 app = Flask(__name__)
 @app.route('/')
 def index():
+    menu.clear()
     return render_template("index.html")
 @app.route('/create/', methods = ['GET', 'POST'])
 def create():
